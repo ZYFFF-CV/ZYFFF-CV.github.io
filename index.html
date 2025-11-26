@@ -77,6 +77,26 @@
       background-color: rgba(148, 163, 184, 0.25);
       border-radius: 12px;
     }
+
+    /* Recent News：每条之间拉开一点间距 */
+    .recent-news .news-list {
+      margin-top: 0.75rem;   /* 标题与第一条之间 */
+    }
+
+    .recent-news .news-item {
+      padding: 0.9rem 1.1rem;  /* 稍微有点内边距，看起来像独立卡片 */
+      margin-bottom: 0.9rem;   /* 每条之间空一点 */
+    }
+
+    .recent-news .news-item:last-child {
+      margin-bottom: 0;        /* 最后一条不需要再加间距 */
+    }
+
+    /* 整个 Recent News 区块和 Publications 之间的间距 */
+    .recent-news {
+      margin-bottom: 2.2rem;   /* 这一行决定 Recent News 底部和 Publications 标题之间的空白 */
+    }
+    
   </style>
 
 </head>
