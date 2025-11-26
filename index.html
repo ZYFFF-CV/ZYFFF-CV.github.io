@@ -148,10 +148,23 @@
     <div class="main-content">
     
     <!-- 添加标签导航 -->
-    <div class="tab-navigation">
-      <button class="tab-button active" data-tab="research">Research & News</button>
-      <button class="tab-button" data-tab="about">About</button>
-    </div>
+    
+    <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>Academic Activities</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>About</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
     
     <style>
       /* 标签导航样式 */
@@ -209,7 +222,9 @@
     
     <!-- 修改第一个标签的内容，只保留Recent News和Publications -->
     <article class="tab-content active" id="research">
-    
+    <header>
+        <h2 class="h2 article-title">Academic Activities</h2>
+      </header>
     <!-- Recent News部分 -->
     <section class="recent-news">
       <h3 class="h3 news-title">Recent News!</h3>
