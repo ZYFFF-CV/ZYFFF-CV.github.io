@@ -28,7 +28,7 @@
       --color-border-soft: #e5e7eb;
       --color-text-main: #111827;
       --color-text-muted: #6b7280;
-      --color-accent: #2563eb;   /* 蓝色：链接、高亮 */
+      --color-accent: #2563eb;      /* 蓝色：链接、高亮 */
       --color-accent-soft: #0f766e; /* 次要强调（少用） */
     }
 
@@ -42,33 +42,45 @@
       background: transparent;
     }
 
-    /* 侧边栏改成白色卡片风格，而不是深色块 */
+    /* 每个页面 article 的大背景从“黑板”改为透明/浅色 */
+    article {
+      background-color: transparent !important;
+      box-shadow: none;
+    }
+
+    /* 侧边栏整体变白卡片 */
     .sidebar {
-      background-color: var(--color-bg-card);
+      background-color: var(--color-bg-card) !important;
       border-right: 1px solid var(--color-border-soft);
       box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
     }
 
-    .sidebar .name {
-      color: var(--color-text-main);
-    }
-
-    .sidebar .title {
-      color: var(--color-text-muted);
-    }
-
+    .sidebar-info,
     .sidebar-info_more {
-      background-color: var(--color-bg-card);
+      background-color: var(--color-bg-card) !important;
+    }
+
+    .sidebar .name {
+      color: var(--color-text-main) !important;
+    }
+
+    /* “Associate Professor” 这个 title 原来是深色小块，这里去掉背景 */
+    .sidebar .title {
+      background-color: transparent !important;
+      color: var(--color-text-muted) !important;
+      padding: 0;
+      border-radius: 0;
+      box-shadow: none;
     }
 
     /* 主体区域背景：很浅的渐变，比纯白更有层次 */
     .main-content {
-      background: linear-gradient(180deg, #f9fafb 0%, #eef0f5 100%);
+      background: linear-gradient(180deg, #f9fafb 0%, #eef0f5 100%) !important;
     }
 
     /* 顶部导航条：白底 + 底部细边框 */
     .navbar {
-      background-color: var(--color-bg-card);
+      background-color: var(--color-bg-card) !important;
       border-bottom: 1px solid var(--color-border-soft);
       position: sticky;
       top: 0;
@@ -76,15 +88,15 @@
     }
 
     .navbar-link {
-      color: var(--color-text-muted);
+      color: var(--color-text-muted) !important;
     }
 
     .navbar-link.active {
-      color: var(--color-accent);
+      color: var(--color-accent) !important;
     }
 
     .navbar-link:hover {
-      color: var(--color-accent);
+      color: var(--color-accent) !important;
     }
 
     /* 标题统一风格 */
@@ -92,22 +104,22 @@
     .h3,
     .h4,
     .article-title {
-      color: var(--color-text-main);
+      color: var(--color-text-main) !important;
     }
 
-    /* 所有内容卡片类模块都统一成白底卡片 */
+    /* 内容卡片：新闻、时间线、service、publications 用白底卡片 */
     .content-card,
     .service-item,
     .timeline-item,
     .news-item,
     .publication-item {
-      background-color: var(--color-bg-card);
+      background-color: var(--color-bg-card) !important;
       border: 1px solid var(--color-border-soft);
       border-radius: 16px;
       box-shadow: 0 12px 30px rgba(15, 23, 42, 0.04);
     }
 
-    /* Recent News 日期：收敛一点，只用蓝色 */
+    /* Recent News 日期 */
     .news-date {
       color: var(--color-accent);
       font-weight: 600;
@@ -119,9 +131,9 @@
       margin-top: 0.35rem;
     }
 
-    /* Publications 标题：不再紫红一堆，统一深色 */
+    /* Publications 标题与信息 */
     .publication-title {
-      color: var(--color-text-main);
+      color: var(--color-text-main) !important;
       font-weight: 600;
       margin-bottom: 0.35rem;
     }
@@ -133,7 +145,7 @@
     }
 
     .publication-link {
-      color: var(--color-accent);
+      color: var(--color-accent) !important;
       font-weight: 500;
       margin-right: 0.75rem;
     }
@@ -142,7 +154,7 @@
       text-decoration: underline;
     }
 
-    /* 时间线列表和标题间距 */
+    /* 时间线列表与标题间距 */
     .timeline-list {
       margin-top: 20px;
       padding-top: 15px;
@@ -150,21 +162,42 @@
 
     /* Research Interests 图标背景稍微柔和一些 */
     .service-icon-box {
-      background-color: #e5f0ff;
+      background-color: #e5f0ff !important;
       border-radius: 12px;
     }
 
-    /* 联系方式 & 链接统一用主色蓝 */
-    .contact-link,
+    /* 联系方式区域：图标底色、文字颜色 */
+    .contact-item .icon-box {
+      background-color: #e5f0ff !important;
+      color: var(--color-accent);
+      border-radius: 12px;
+    }
+
+    .contact-item .icon-box ion-icon {
+      color: var(--color-accent) !important;
+    }
+
+    .contact-title,
+    .contact-info address,
+    .contact-info time {
+      color: var(--color-text-main) !important;
+    }
+
+    /* 关键：Email 链接文本从白色改为主题蓝，权重要压过原主题 */
+    a.contact-link {
+      color: var(--color-accent) !important;
+    }
+
+    a.contact-link:hover {
+      text-decoration: underline;
+    }
+
+    /* 全局链接也统一用主色蓝 */
     a {
       color: var(--color-accent);
     }
 
-    .contact-link:hover {
-      text-decoration: underline;
-    }
-
-    /* 社交图标：灰底圆角，悬停时变蓝 */
+    /* 社交图标：灰底圆角，悬停变蓝 */
     .social-link {
       background-color: #e5e7eb;
       color: #4b5563;
@@ -176,9 +209,9 @@
       color: #ffffff;
     }
 
-    /* 分隔线颜色变浅一点 */
+    /* 分隔线颜色变浅 */
     .separator {
-      background-color: var(--color-border-soft);
+      background-color: var(--color-border-soft) !important;
     }
   </style>
 </head>
