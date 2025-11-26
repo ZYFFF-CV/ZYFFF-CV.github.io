@@ -19,30 +19,166 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <!-- 内联CSS：只做你需要的那一点点微调 -->
+  <!-- 内联CSS：覆盖原模板的深色系，改成浅色学术风 -->
   <style>
-    /* Recent News 日期和文字更显眼 */
+    :root {
+      /* 主题主色 & 辅助色 */
+      --color-bg-page: #f5f5f7;
+      --color-bg-card: #ffffff;
+      --color-border-soft: #e5e7eb;
+      --color-text-main: #111827;
+      --color-text-muted: #6b7280;
+      --color-accent: #2563eb;   /* 蓝色：链接、高亮 */
+      --color-accent-soft: #0f766e; /* 次要强调（少用） */
+    }
+
+    /* 整体背景、文字颜色 */
+    body {
+      background-color: var(--color-bg-page);
+      color: var(--color-text-main);
+    }
+
+    main {
+      background: transparent;
+    }
+
+    /* 侧边栏改成白色卡片风格，而不是深色块 */
+    .sidebar {
+      background-color: var(--color-bg-card);
+      border-right: 1px solid var(--color-border-soft);
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+    }
+
+    .sidebar .name {
+      color: var(--color-text-main);
+    }
+
+    .sidebar .title {
+      color: var(--color-text-muted);
+    }
+
+    .sidebar-info_more {
+      background-color: var(--color-bg-card);
+    }
+
+    /* 主体区域背景：很浅的渐变，比纯白更有层次 */
+    .main-content {
+      background: linear-gradient(180deg, #f9fafb 0%, #eef0f5 100%);
+    }
+
+    /* 顶部导航条：白底 + 底部细边框 */
+    .navbar {
+      background-color: var(--color-bg-card);
+      border-bottom: 1px solid var(--color-border-soft);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .navbar-link {
+      color: var(--color-text-muted);
+    }
+
+    .navbar-link.active {
+      color: var(--color-accent);
+    }
+
+    .navbar-link:hover {
+      color: var(--color-accent);
+    }
+
+    /* 标题统一风格 */
+    .h2,
+    .h3,
+    .h4,
+    .article-title {
+      color: var(--color-text-main);
+    }
+
+    /* 所有内容卡片类模块都统一成白底卡片 */
+    .content-card,
+    .service-item,
+    .timeline-item,
+    .news-item,
+    .publication-item {
+      background-color: var(--color-bg-card);
+      border: 1px solid var(--color-border-soft);
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.04);
+    }
+
+    /* Recent News 日期：收敛一点，只用蓝色 */
     .news-date {
-      color: #ff4d4f;
-      font-weight: bold;
-      font-size: 1.1em;
+      color: var(--color-accent);
+      font-weight: 600;
+      font-size: 0.95rem;
     }
 
-    .news-item h4 {
-      color: #1890ff;
-      margin-top: 0.5em;
+    .news-item .news-title {
+      color: var(--color-text-main);
+      margin-top: 0.35rem;
     }
 
-    /* Paper Title 更显眼 */
+    /* Publications 标题：不再紫红一堆，统一深色 */
     .publication-title {
-      color: #ffffff;
-      font-weight: bold;
-      margin-bottom: 0.5em;
+      color: var(--color-text-main);
+      font-weight: 600;
+      margin-bottom: 0.35rem;
     }
 
-    /* timeline-list 与标题拉开距离 */
+    .publication-authors,
+    .publication-info {
+      color: var(--color-text-muted);
+      font-size: 0.9rem;
+    }
+
+    .publication-link {
+      color: var(--color-accent);
+      font-weight: 500;
+      margin-right: 0.75rem;
+    }
+
+    .publication-link:hover {
+      text-decoration: underline;
+    }
+
+    /* 时间线列表和标题间距 */
     .timeline-list {
       margin-top: 20px;
       padding-top: 15px;
+    }
+
+    /* Research Interests 图标背景稍微柔和一些 */
+    .service-icon-box {
+      background-color: #e5f0ff;
+      border-radius: 12px;
+    }
+
+    /* 联系方式 & 链接统一用主色蓝 */
+    .contact-link,
+    a {
+      color: var(--color-accent);
+    }
+
+    .contact-link:hover {
+      text-decoration: underline;
+    }
+
+    /* 社交图标：灰底圆角，悬停时变蓝 */
+    .social-link {
+      background-color: #e5e7eb;
+      color: #4b5563;
+      border-radius: 999px;
+    }
+
+    .social-link:hover {
+      background-color: var(--color-accent);
+      color: #ffffff;
+    }
+
+    /* 分隔线颜色变浅一点 */
+    .separator {
+      background-color: var(--color-border-soft);
     }
   </style>
 </head>
@@ -91,7 +227,7 @@
           </li>
         </ul>
 
-        <div class="separator"></div>
+        <!-- <div class="separator"></div>
 
         <ul class="social-list">
           <li class="social-item">
@@ -111,7 +247,7 @@
           </li>
         </ul>
 
-      </div>
+      </div> -->
 
     </aside>
 
