@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -42,13 +42,13 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
+          <img src="./assets/images/myphoto.jpg" alt="Zhenyu Fang" width="80">
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Richard hanrick">Richard hanrick</h1>
+          <h1 class="name" title="Zhenyu Fang">Zhenyu Fang</h1>
 
-          <p class="title">Web developer</p>
+          <p class="title">Associate Professor</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
@@ -162,42 +162,20 @@
     <div class="main-content">
 
       <!--
-        - #NAVBAR
+        - #ABOUT (single page content)
       -->
 
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Publications</button>
-          </li>
-
-        </ul>
-
-      </nav>
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about active" data-page="About">
+      <article class="about active">
 
         <header>
-          <h2 class="h2 article-title">关于我</h2>
+          <h2 class="h2 article-title">About Me</h2>
         </header>
 
         <section class="about-text">
           <p>
-            这里放您的学术简介，包括您的研究领域、主要贡献、研究兴趣等。
-            可以简要介绍您的教育背景、当前研究项目以及未来研究方向。
+             I am currently an associate professor in the School of Software at Northwest Polytechnical University. My research interests include but are not limited to Object detection, 
+             Explainable Artificial Intelligence (XAI), and other deep learning applications. I have a rich experience in this field, and I am always keep up with the latest research trends. 
+             My recent research works include but are not limited to Vision Language Model, Domain-specified Architecture Rebuild, Incremental Learning, and Multimodal learning.
           </p>
         </section>
 
@@ -208,21 +186,21 @@
 
         <section class="service">
 
-          <h3 class="h3 service-title">研究方向</h3>
+          <h3 class="h3 service-title">Research Interests</h3>
 
           <ul class="service-list">
 
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="研究方向1" width="40">
+                <img src="./assets/images/icon-dev.svg" alt="Research Direction 1" width="40">
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">研究方向1名称</h4>
+                <h4 class="h4 service-item-title">Object Detection</h4>
 
                 <p class="service-item-text">
-                  简要描述这个研究方向的内容和目标。
+                  Research on efficient and accurate object detection algorithms, including deep learning-based object recognition, localization, and tracking techniques.
                 </p>
               </div>
 
@@ -231,14 +209,30 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="研究方向2" width="40">
+                <img src="./assets/images/icon-app.svg" alt="Research Direction 2" width="40">
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">研究方向2名称</h4>
+                <h4 class="h4 service-item-title">Explainable Artificial Intelligence</h4>
 
                 <p class="service-item-text">
-                  简要描述这个研究方向的内容和目标。
+                  Research on how to improve the explainability of deep learning models, making AI decision processes more transparent and trustworthy.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg" alt="Research Direction 3" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Vision Language Models</h4>
+
+                <p class="service-item-text">
+                  Research on multimodal learning methods to achieve effective fusion and interaction between visual and linguistic information.
                 </p>
               </div>
 
@@ -248,63 +242,82 @@
 
         </section>
 
-      </article>
+        <!--
+          - Recent News
+        -->
 
+        <section class="recent-news">
 
+          <h3 class="h3 news-title">Recent News!</h3>
 
+          <ul class="news-list">
 
-      <!--
-        - #PUBLICATIONS
-      -->
-
-      <article class="publications" data-page="论文">
-
-        <header>
-          <h2 class="h2 article-title">发表论文</h2>
-        </header>
-
-        <section class="publications-section">
-
-          <h3 class="h3 section-title">期刊论文</h3>
-
-          <ul class="publications-list">
-
-            <li class="publication-item content-card">
-              <h4 class="h4 publication-title">论文标题1</h4>
-              <p class="publication-authors">作者1, 作者2, 作者3</p>
-              <p class="publication-info">期刊名称, 卷号(期号), 页码范围, 发表年份</p>
-              <div class="publication-links">
-                <a href="论文链接" class="publication-link">查看论文</a>
-                <a href="代码链接" class="publication-link">代码</a>
-              </div>
+            <li class="news-item content-card">
+              <span class="news-date">June 2023</span>
+              <h4 class="h4 news-title">New research paper accepted</h4>
+              <p class="news-text">Our paper on multimodal learning has been accepted by a top-tier conference.</p>
             </li>
 
-            <li class="publication-item content-card">
-              <h4 class="h4 publication-title">论文标题2</h4>
-              <p class="publication-authors">作者1, 作者2</p>
-              <p class="publication-info">期刊名称, 卷号(期号), 页码范围, 发表年份</p>
-              <div class="publication-links">
-                <a href="论文链接" class="publication-link">查看论文</a>
-              </div>
+            <li class="news-item content-card">
+              <span class="news-date">May 2023</span>
+              <h4 class="h4 news-title">Research grant awarded</h4>
+              <p class="news-text">Received funding for a new project on explainable AI in computer vision.</p>
+            </li>
+
+            <li class="news-item content-card">
+              <span class="news-date">March 2023</span>
+              <h4 class="h4 news-title">Invited talk at international conference</h4>
+              <p class="news-text">Delivered a keynote speech on the future of vision language models.</p>
             </li>
 
           </ul>
 
         </section>
 
+        <!--
+          - Publications
+        -->
+
         <section class="publications-section">
 
-          <h3 class="h3 section-title">会议论文</h3>
+          <h3 class="h3 section-title">Publications</h3>
+
+          <h4 class="h4 section-subtitle">Journal Papers</h4>
 
           <ul class="publications-list">
 
             <li class="publication-item content-card">
-              <h4 class="h4 publication-title">论文标题3</h4>
-              <p class="publication-authors">作者1, 作者2, 作者3, 作者4</p>
-              <p class="publication-info">会议名称, 会议地点, 页码范围, 发表年份</p>
+              <h4 class="h4 publication-title">Paper Title 1</h4>
+              <p class="publication-authors">Author 1, Author 2, Author 3</p>
+              <p class="publication-info">Journal Name, Volume(Issue), Page Range, Publication Year</p>
               <div class="publication-links">
-                <a href="论文链接" class="publication-link">查看论文</a>
-                <a href="演示链接" class="publication-link">演示</a>
+                <a href="paper-link" class="publication-link">View Paper</a>
+                <a href="code-link" class="publication-link">Code</a>
+              </div>
+            </li>
+
+            <li class="publication-item content-card">
+              <h4 class="h4 publication-title">Paper Title 2</h4>
+              <p class="publication-authors">Author 1, Author 2</p>
+              <p class="publication-info">Journal Name, Volume(Issue), Page Range, Publication Year</p>
+              <div class="publication-links">
+                <a href="paper-link" class="publication-link">View Paper</a>
+              </div>
+            </li>
+
+          </ul>
+
+          <h4 class="h4 section-subtitle">Conference Papers</h4>
+
+          <ul class="publications-list">
+
+            <li class="publication-item content-card">
+              <h4 class="h4 publication-title">Paper Title 3</h4>
+              <p class="publication-authors">Author 1, Author 2, Author 3, Author 4</p>
+              <p class="publication-info">Conference Name, Conference Location, Page Range, Publication Year</p>
+              <div class="publication-links">
+                <a href="paper-link" class="publication-link">View Paper</a>
+                <a href="demo-link" class="publication-link">Demo</a>
               </div>
             </li>
 
@@ -335,142 +348,6 @@
 </body>
 
 </html>
-        </div>
-
-
-        <!--
-          - clients
-        -->
-
-        <section class="clients">
-
-          <h3 class="h3 clients-title">Clients</h3>
-
-          <ul class="clients-list has-scrollbar">
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-1-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-2-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-3-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-4-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-5-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-6-color.png" alt="client logo">
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">University school of the arts</h4>
-
-              <span>2007 — 2008</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">New york academy of art</h4>
-
-              <span>2006 — 2007</span>
-
-              <p class="timeline-text">
-                Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est
-                omnis..
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">High school of art and design</h4>
-
-              <span>2002 — 2004</span>
-
-              <p class="timeline-text">
-                Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur
-                magni dolores
-                eos.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experience</h3>
-          </div>
-
           <ol class="timeline-list">
 
             <li class="timeline-item">
