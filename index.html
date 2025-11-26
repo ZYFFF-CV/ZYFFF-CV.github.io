@@ -7,45 +7,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zhenyu Fang</title>
 
-  <!--
-    - favicon
-  -->
+  <!-- favicon -->
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
 
-  <!--
-    - custom css link
-  -->
+  <!-- custom css -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
-  <!--
-    - google font link
-  -->
+  <!-- google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- 内联CSS用于调整特定元素样式 -->
+  <!-- 内联CSS：只做你需要的那一点点微调 -->
   <style>
-    /* 增强Recent News!日期和文字的显眼度 */
+    /* Recent News 日期和文字更显眼 */
     .news-date {
       color: #ff4d4f;
       font-weight: bold;
       font-size: 1.1em;
     }
-    
+
     .news-item h4 {
       color: #1890ff;
       margin-top: 0.5em;
     }
-    
-    /* 增强Paper Title的颜色使其更显眼 */
+
+    /* Paper Title 更显眼 */
     .publication-title {
       color: #ffffff;
       font-weight: bold;
       margin-bottom: 0.5em;
     }
-    
-    /* 为timeline-list添加顶部间距，避免与标题重叠 */
+
+    /* timeline-list 与标题拉开距离 */
     .timeline-list {
       margin-top: 20px;
       padding-top: 15px;
@@ -55,33 +49,25 @@
 
 <body>
 
-  <!--
-    - #MAIN
-  -->
-
+  <!-- MAIN -->
   <main>
 
-    <!--
-      - #SIDEBAR
-    -->
-
+    <!-- SIDEBAR -->
     <aside class="sidebar" data-sidebar>
 
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/myphoto.jpg" alt="Zhenyu Fang" width="80">
+          <img src="./assets/images/myphoto.jpg" alt="xxx" width="80">
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Zhenyu Fang">Zhenyu Fang</h1>
-
+          <h1 class="name" title="xxx">xxx</h1>
           <p class="title">Associate Professor</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
           <span>Show Contacts</span>
-
           <ion-icon name="chevron-down"></ion-icon>
         </button>
 
@@ -92,244 +78,283 @@
         <div class="separator"></div>
 
         <ul class="contacts-list">
-
           <li class="contact-item">
-
             <div class="icon-box">
               <ion-icon name="mail-outline"></ion-icon>
             </div>
 
             <div class="contact-info">
               <p class="contact-title">Email</p>
-
-              <a href="zhenyu.fang@nwpu.edu.cn" class="contact-link">zhenyu.fang@nwpu.edu.cn</a>
+              <!-- 这里把 xxxxx 换成真实邮箱和 mailto 链接就行 -->
+              <a href="xxxxxx" class="contact-link">xxxxx</a>
             </div>
-
           </li>
-
         </ul>
 
         <div class="separator"></div>
 
         <ul class="social-list">
-
           <li class="social-item">
             <a href="#" class="social-link">
               <ion-icon name="logo-facebook"></ion-icon>
             </a>
           </li>
-
           <li class="social-item">
             <a href="#" class="social-link">
               <ion-icon name="logo-twitter"></ion-icon>
             </a>
           </li>
-
           <li class="social-item">
             <a href="#" class="social-link">
               <ion-icon name="logo-instagram"></ion-icon>
             </a>
           </li>
-
         </ul>
 
       </div>
 
     </aside>
 
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <!-- 在main-content div内部，article元素之前添加标签导航 -->
+    <!-- main-content -->
     <div class="main-content">
-    
-    <!-- 添加标签导航 -->
-    
-    <!-- 修改导航栏，使用原始网站的结构 -->
-    <nav class="navbar">
-      <ul class="navbar-list">
-        <li class="navbar-item">
-          <button class="navbar-link active" data-nav-link="academic activities">Academic Activities</button>
-        </li>
-        <li class="navbar-item">
-          <button class="navbar-link" data-nav-link="about">About</button>
-        </li>
-      </ul>
-    </nav>
-    
-    <!-- 修改第一个标签内容 -->
-    <article data-page="academic activities" class="active">
-      <header>
-        <h2 class="h2 article-title">Academic Activities</h2>
-      </header>
-      <!-- Recent News部分 -->
-      <section class="recent-news">
-        <h3 class="h3 news-title">Recent News!</h3>
-        <ul class="news-list">
-          <li class="news-item content-card">
-            <span class="news-date" style="color: #ff4d4f; font-weight: bold;">June 2023</span>
-            <h4 class="h4 news-title">New research paper accepted</h4>
-            <p class="news-text">Our paper on multimodal learning has been accepted by a top-tier conference.</p>
+
+      <!-- NAVBAR -->
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <!-- data-nav-link 的值用来和 data-page 对应 -->
+            <button class="navbar-link active" data-nav-link="academic activities">Academic Activities</button>
           </li>
-          <li class="news-item content-card">
-            <span class="news-date" style="color: #ff4d4f; font-weight: bold;">May 2023</span>
-            <h4 class="h4 news-title">Research grant awarded</h4>
-            <p class="news-text">Received funding for a new project on explainable AI in computer vision.</p>
-          </li>
-          <li class="news-item content-card">
-            <span class="news-date" style="color: #ff4d4f; font-weight: bold;">March 2023</span>
-            <h4 class="h4 news-title">Invited talk at international conference</h4>
-            <p class="news-text">Delivered a keynote speech on the future of vision language models.</p>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link="about">About</button>
           </li>
         </ul>
-      </section>
+      </nav>
 
-      <!-- Publications部分 -->
-      <section class="publications-section">
-        <h3 class="h3 section-title">Publications</h3>
-        <h4 class="h4 section-subtitle">Journal Papers</h4>
-        <ul class="publications-list">
-          <li class="publication-item content-card">
-            <h4 class="h4 publication-title" style="color: #722ed1; font-weight: bold;">Paper Title 1</h4>
-            <p class="publication-authors">Author 1, Author 2, Author 3</p>
-            <p class="publication-info">Journal Name, Volume(Issue), Page Range, Publication Year</p>
-            <div class="publication-links">
-              <a href="paper-link" class="publication-link">View Paper</a>
-              <a href="code-link" class="publication-link">Code</a>
-            </div>
-          </li>
-          <li class="publication-item content-card">
-            <h4 class="h4 publication-title" style="color: #722ed1; font-weight: bold;">Paper Title 2</h4>
-            <p class="publication-authors">Author 1, Author 2</p>
-            <p class="publication-info">Journal Name, Volume(Issue), Page Range, Publication Year</p>
-            <div class="publication-links">
-              <a href="paper-link" class="publication-link">View Paper</a>
-            </div>
-          </li>
-        </ul>
-        <h4 class="h4 section-subtitle">Conference Papers</h4>
-        <ul class="publications-list">
-          <li class="publication-item content-card">
-            <h4 class="h4 publication-title" style="color: #722ed1; font-weight: bold;">Paper Title 3</h4>
-            <p class="publication-authors">Author 1, Author 2, Author 3, Author 4</p>
-            <p class="publication-info">Conference Name, Conference Location, Page Range, Publication Year</p>
-            <div class="publication-links">
-              <a href="paper-link" class="publication-link">View Paper</a>
-              <a href="demo-link" class="publication-link">Demo</a>
-            </div>
-          </li>
-        </ul>
-      </section>
-    </article>
+      <!-- Academic Activities 页面 -->
+      <article class="active" data-page="academic activities">
+        <header>
+          <h2 class="h2 article-title">Academic Activities</h2>
+        </header>
 
-    <!-- 修改第二个标签内容 -->
-    <article data-page="about">
-      <header>
-        <h2 class="h2 article-title">About Me</h2>
-      </header>
-      
-      <section class="about-text">
-        <p>
-          I am currently an associate professor in the School of Software at Northwest Polytechnical University. My research interests include but are not limited to Object detection, 
-          Explainable Artificial Intelligence (XAI), and other deep learning applications. I have a rich experience in this field, and I always keep up with the latest research trends. 
-          My recent research works include but are not limited to Vision Language Model, Domain-specified Architecture Rebuild, Incremental Learning, and Multimodal learning.
-        </p>
-      </section>
+        <!-- Recent News -->
+        <section class="recent-news">
+          <h3 class="h3 news-title">Recent News!</h3>
+          <ul class="news-list">
+            <li class="news-item content-card">
+              <span class="news-date">June 2023</span>
+              <h4 class="h4 news-title">New research paper accepted</h4>
+              <p class="news-text">Our paper on multimodal learning has been accepted by a top-tier conference.</p>
+            </li>
+            <li class="news-item content-card">
+              <span class="news-date">May 2023</span>
+              <h4 class="h4 news-title">Research grant awarded</h4>
+              <p class="news-text">Received funding for a new project on explainable AI in computer vision.</p>
+            </li>
+            <li class="news-item content-card">
+              <span class="news-date">March 2023</span>
+              <h4 class="h4 news-title">Invited talk at international conference</h4>
+              <p class="news-text">Delivered a keynote speech on the future of vision language models.</p>
+            </li>
+          </ul>
+        </section>
 
-      <!-- Education & Experience部分 -->
-      <section class="timeline">
-        <h3 class="h3 timeline-title">Education & Experience</h3>
-        <ol class="timeline-list" style="margin-top: 20px; padding-top: 15px;">
-          <li class="timeline-item">
-            <h4 class="h4 timeline-item-title">Creative director</h4>
-            <span>2015 — Present</span>
-            <p class="timeline-text">
-              Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
-              molestias
-              exceptur.
-            </p>
-          </li>
-          <li class="timeline-item">
-            <h4 class="h4 timeline-item-title">Art director</h4>
-            <span>2013 — 2015</span>
-            <p class="timeline-text">
-              Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-              quas molestias
-              exceptur.
-            </p>
-          </li>
-          <li class="timeline-item">
-            <h4 class="h4 timeline-item-title">Web designer</h4>
-            <span>2010 — 2013</span>
-            <p class="timeline-text">
-              Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-              quas molestias
-              exceptur.
-            </p>
-          </li>
-        </ol>
-      </section>
+        <!-- Publications -->
+        <section class="publications-section">
+          <h3 class="h3 section-title">Publications</h3>
 
-      <!-- Research Interests部分 -->
-      <section class="service">
-        <h3 class="h3 service-title">Research Interests</h3>
-        <ul class="service-list">
-          <li class="service-item">
-            <div class="service-icon-box">
-              <img src="./assets/images/icon-dev.svg" alt="Research Direction 1" width="40">
-            </div>
-            <div class="service-content-box">
-              <h4 class="h4 service-item-title">Object Detection</h4>
-              <p class="service-item-text">
-                Research on efficient and accurate object detection algorithms, including deep learning-based object recognition, localization, and tracking techniques.
+          <h4 class="h4 section-subtitle">Journal Papers</h4>
+          <ul class="publications-list">
+            <li class="publication-item content-card">
+              <h4 class="h4 publication-title">Paper Title 1</h4>
+              <p class="publication-authors">Author 1, Author 2, Author 3</p>
+              <p class="publication-info">Journal Name, Volume(Issue), Page Range, Publication Year</p>
+              <div class="publication-links">
+                <a href="paper-link" class="publication-link">View Paper</a>
+                <a href="code-link" class="publication-link">Code</a>
+              </div>
+            </li>
+
+            <li class="publication-item content-card">
+              <h4 class="h4 publication-title">Paper Title 2</h4>
+              <p class="publication-authors">Author 1, Author 2</p>
+              <p class="publication-info">Journal Name, Volume(Issue), Page Range, Publication Year</p>
+              <div class="publication-links">
+                <a href="paper-link" class="publication-link">View Paper</a>
+              </div>
+            </li>
+          </ul>
+
+          <h4 class="h4 section-subtitle">Conference Papers</h4>
+          <ul class="publications-list">
+            <li class="publication-item content-card">
+              <h4 class="h4 publication-title">Paper Title 3</h4>
+              <p class="publication-authors">Author 1, Author 2, Author 3, Author 4</p>
+              <p class="publication-info">Conference Name, Conference Location, Page Range, Publication Year</p>
+              <div class="publication-links">
+                <a href="paper-link" class="publication-link">View Paper</a>
+                <a href="demo-link" class="publication-link">Demo</a>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- About 页面 -->
+      <article data-page="about">
+        <header>
+          <h2 class="h2 article-title">About Me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I am currently an associate professor in the School of Software at Polytechnical University. My research
+            interests include but are not limited to Object detection,
+            Explainable Artificial Intelligence (XAI), and other deep learning applications. I have a rich experience in
+            this field, and I always keep up with the latest research trends.
+            My recent research works include but are not limited to Vision Language Model, Domain-specified Architecture
+            Rebuild, Incremental Learning, and Multimodal learning.
+          </p>
+        </section>
+
+        <!-- Education & Experience -->
+        <section class="timeline">
+          <h3 class="h3 timeline-title">Education &amp; Experience</h3>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Creative director</h4>
+              <span>2015 — Present</span>
+              <p class="timeline-text">
+                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
+                molestias exceptur.
               </p>
-            </div>
-          </li>
-          <li class="service-item">
-            <div class="service-icon-box">
-              <img src="./assets/images/icon-app.svg" alt="Research Direction 2" width="40">
-            </div>
-            <div class="service-content-box">
-              <h4 class="h4 service-item-title">Explainable Artificial Intelligence</h4>
-              <p class="service-item-text">
-                Research on how to improve the explainability of deep learning models, making AI decision processes more transparent and trustworthy.
-              </p>
-            </div>
-          </li>
-          <li class="service-item">
-            <div class="service-icon-box">
-              <img src="./assets/images/icon-design.svg" alt="Research Direction 3" width="40">
-            </div>
-            <div class="service-content-box">
-              <h4 class="h4 service-item-title">Vision Language Models</h4>
-              <p class="service-item-text">
-                Research on multimodal learning methods to achieve effective fusion and interaction between visual and linguistic information.
-              </p>
-            </div>
-          </li>
-        </ul>
-      </section>
-    </article>
+            </li>
 
-    </div>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Art director</h4>
+              <span>2013 — 2015</span>
+              <p class="timeline-text">
+                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+                quas molestias exceptur.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Web designer</h4>
+              <span>2010 — 2013</span>
+              <p class="timeline-text">
+                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+                quas molestias exceptur.
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <!-- Research Interests -->
+        <section class="service">
+          <h3 class="h3 service-title">Research Interests</h3>
+
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Research Direction 1" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Object Detection</h4>
+                <p class="service-item-text">
+                  Research on efficient and accurate object detection algorithms, including deep learning-based object
+                  recognition, localization, and tracking techniques.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="Research Direction 2" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Explainable Artificial Intelligence</h4>
+                <p class="service-item-text">
+                  Research on how to improve the explainability of deep learning models, making AI decision processes
+                  more transparent and trustworthy.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg" alt="Research Direction 3" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Vision Language Models</h4>
+                <p class="service-item-text">
+                  Research on multimodal learning methods to achieve effective fusion and interaction between visual and
+                  linguistic information.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+    </div> <!-- /main-content -->
 
   </main>
 
+  <!-- 这里不再引用原来的 assets/js/script.js，因为它会报错并阻止页面切换 -->
+  <!-- 自己写一个精简版的交互脚本 -->
 
+  <script>
+    'use strict';
 
+    // 通用：切换元素 active 类
+    const elementToggleFunc = function (elem) {
+      if (!elem) return;
+      elem.classList.toggle('active');
+    };
 
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
+    // 侧边栏显示/隐藏（移动端）
+    const sidebar = document.querySelector('[data-sidebar]');
+    const sidebarBtn = document.querySelector('[data-sidebar-btn]');
 
-  <!--
-    - ionicon link
-  -->
+    if (sidebar && sidebarBtn) {
+      sidebarBtn.addEventListener('click', function () {
+        elementToggleFunc(sidebar);
+      });
+    }
+
+    // 页面导航切换
+    const navigationLinks = document.querySelectorAll('[data-nav-link]');
+    const pages = document.querySelectorAll('[data-page]');
+
+    navigationLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        // 优先用 data-nav-link 的值；没有就用按钮文字
+        const target = (link.dataset.navLink || link.textContent)
+          .trim()
+          .toLowerCase();
+
+        // 切换文章显示
+        pages.forEach(function (page) {
+          const pageName = (page.dataset.page || '').trim().toLowerCase();
+          if (pageName === target) {
+            page.classList.add('active');
+            window.scrollTo(0, 0);
+          } else {
+            page.classList.remove('active');
+          }
+        });
+
+        // 切换导航按钮 active 样式
+        navigationLinks.forEach(function (nav) {
+          nav.classList.remove('active');
+        });
+        link.classList.add('active');
+      });
+    });
+  </script>
+
+  <!-- ionicon -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
