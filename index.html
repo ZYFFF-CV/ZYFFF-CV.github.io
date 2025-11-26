@@ -149,20 +149,20 @@
     
     <!-- 添加标签导航 -->
     
-    <!-- 修改导航栏，将第一个标签改为Academic Activities -->
+    <!-- 修改导航栏，使用原始网站的结构 -->
     <nav class="navbar">
       <ul class="navbar-list">
         <li class="navbar-item">
-          <button class="navbar-link active" data-nav-link>Academic Activities</button>
+          <button class="navbar-link active" data-nav-link="academic activities">Academic Activities</button>
         </li>
         <li class="navbar-item">
-          <button class="navbar-link" data-nav-link>About</button>
+          <button class="navbar-link" data-nav-link="about">About</button>
         </li>
       </ul>
     </nav>
     
-    <!-- 修改第一个标签内容的类和数据属性 -->
-    <article class="academic-activities active" data-page="academic activities">
+    <!-- 修改第一个标签内容 -->
+    <article data-page="academic activities" class="active">
       <header>
         <h2 class="h2 article-title">Academic Activities</h2>
       </header>
@@ -171,30 +171,30 @@
         <h3 class="h3 news-title">Recent News!</h3>
         <ul class="news-list">
           <li class="news-item content-card">
-            <span class="news-date">June 2023</span>
+            <span class="news-date" style="color: #ff4d4f; font-weight: bold;">June 2023</span>
             <h4 class="h4 news-title">New research paper accepted</h4>
             <p class="news-text">Our paper on multimodal learning has been accepted by a top-tier conference.</p>
           </li>
           <li class="news-item content-card">
-            <span class="news-date">May 2023</span>
+            <span class="news-date" style="color: #ff4d4f; font-weight: bold;">May 2023</span>
             <h4 class="h4 news-title">Research grant awarded</h4>
             <p class="news-text">Received funding for a new project on explainable AI in computer vision.</p>
           </li>
           <li class="news-item content-card">
-            <span class="news-date">March 2023</span>
+            <span class="news-date" style="color: #ff4d4f; font-weight: bold;">March 2023</span>
             <h4 class="h4 news-title">Invited talk at international conference</h4>
             <p class="news-text">Delivered a keynote speech on the future of vision language models.</p>
           </li>
         </ul>
       </section>
-    
+
       <!-- Publications部分 -->
       <section class="publications-section">
         <h3 class="h3 section-title">Publications</h3>
         <h4 class="h4 section-subtitle">Journal Papers</h4>
         <ul class="publications-list">
           <li class="publication-item content-card">
-            <h4 class="h4 publication-title">Paper Title 1</h4>
+            <h4 class="h4 publication-title" style="color: #722ed1; font-weight: bold;">Paper Title 1</h4>
             <p class="publication-authors">Author 1, Author 2, Author 3</p>
             <p class="publication-info">Journal Name, Volume(Issue), Page Range, Publication Year</p>
             <div class="publication-links">
@@ -203,7 +203,7 @@
             </div>
           </li>
           <li class="publication-item content-card">
-            <h4 class="h4 publication-title">Paper Title 2</h4>
+            <h4 class="h4 publication-title" style="color: #722ed1; font-weight: bold;">Paper Title 2</h4>
             <p class="publication-authors">Author 1, Author 2</p>
             <p class="publication-info">Journal Name, Volume(Issue), Page Range, Publication Year</p>
             <div class="publication-links">
@@ -214,7 +214,7 @@
         <h4 class="h4 section-subtitle">Conference Papers</h4>
         <ul class="publications-list">
           <li class="publication-item content-card">
-            <h4 class="h4 publication-title">Paper Title 3</h4>
+            <h4 class="h4 publication-title" style="color: #722ed1; font-weight: bold;">Paper Title 3</h4>
             <p class="publication-authors">Author 1, Author 2, Author 3, Author 4</p>
             <p class="publication-info">Conference Name, Conference Location, Page Range, Publication Year</p>
             <div class="publication-links">
@@ -226,10 +226,8 @@
       </section>
     </article>
 
-    <!-- 创建第二个标签内容 -->
-    <article class="About" data-page="About">
-      
-      <!-- About Me部分 -->
+    <!-- 修改第二个标签内容 -->
+    <article data-page="about">
       <header>
         <h2 class="h2 article-title">About Me</h2>
       </header>
@@ -241,11 +239,11 @@
           My recent research works include but are not limited to Vision Language Model, Domain-specified Architecture Rebuild, Incremental Learning, and Multimodal learning.
         </p>
       </section>
-    
+
       <!-- Education & Experience部分 -->
       <section class="timeline">
         <h3 class="h3 timeline-title">Education & Experience</h3>
-        <ol class="timeline-list">
+        <ol class="timeline-list" style="margin-top: 20px; padding-top: 15px;">
           <li class="timeline-item">
             <h4 class="h4 timeline-item-title">Creative director</h4>
             <span>2015 — Present</span>
@@ -275,7 +273,7 @@
           </li>
         </ol>
       </section>
-    
+
       <!-- Research Interests部分 -->
       <section class="service">
         <h3 class="h3 service-title">Research Interests</h3>
