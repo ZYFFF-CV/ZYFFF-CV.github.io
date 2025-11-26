@@ -40,7 +40,7 @@
     
     /* 增强Paper Title的颜色使其更显眼 */
     .publication-title {
-      color: #722ed1;
+      color: #ffffff;
       font-weight: bold;
       margin-bottom: 0.5em;
     }
@@ -149,79 +149,20 @@
     
     <!-- 添加标签导航 -->
     
+    <!-- 修改导航栏，将第一个标签改为Academic Activities -->
     <nav class="navbar">
-
       <ul class="navbar-list">
-
         <li class="navbar-item">
-          <button class="navbar-link  active" data-nav-link>Academic Activities</button>
+          <button class="navbar-link active" data-nav-link>Academic Activities</button>
         </li>
-
         <li class="navbar-item">
           <button class="navbar-link" data-nav-link>About</button>
         </li>
-
       </ul>
-
     </nav>
-
     
-    <!-- <style>
-      /* 标签导航样式 */
-      .tab-navigation {
-        display: flex;
-        border-bottom: 2px solid #e0e0e0;
-        margin-bottom: 30px;
-      }
-      
-      .tab-button {
-        padding: 12px 24px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        font-size: 16px;
-        font-weight: 500;
-        color: #666;
-        transition: all 0.3s ease;
-        position: relative;
-      }
-      
-      .tab-button:hover {
-        color: #333;
-      }
-      
-      .tab-button.active {
-        color: #1890ff;
-      }
-      
-      .tab-button.active::after {
-        content: '';
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background-color: #1890ff;
-      }
-      
-      /* 标签内容样式 */
-      .tab-content {
-        display: none;
-      }
-      
-      .tab-content.active {
-        display: block;
-        animation: fadeIn 0.5s ease;
-      }
-      
-      @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-      }
-    </style>
-     -->
-    <!-- 修改第一个标签的内容，只保留Recent News和Publications -->
-    <article class="Academic Activities" data-page="Academic Activities">
+    <!-- 修改第一个标签内容的类和数据属性 -->
+    <article class="academic-activities active" data-page="academic activities">
       <header>
         <h2 class="h2 article-title">Academic Activities</h2>
       </header>
