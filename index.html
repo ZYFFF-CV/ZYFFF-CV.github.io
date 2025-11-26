@@ -23,6 +23,28 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- 内联CSS用于调整特定元素样式 -->
+  <style>
+    /* 增强Recent News!日期和文字的显眼度 */
+    .news-date {
+      color: #ff4d4f;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    
+    .news-item h4 {
+      color: #1890ff;
+      margin-top: 0.5em;
+    }
+    
+    /* 增强Paper Title的颜色使其更显眼 */
+    .publication-title {
+      color: #722ed1;
+      font-weight: bold;
+      margin-bottom: 0.5em;
+    }
+  </style>
 </head>
 
 <body>
@@ -74,56 +96,14 @@
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <a href="zhenyu.fang@nwpu.edu.cn" class="contact-link">richard@example.com</a>
+              <a href="zhenyu.fang@nwpu.edu.cn" class="contact-link">zhenyu.fang@nwpu.edu.cn</a>
             </div>
 
           </li>
 
-          <!-- <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+12133522795" class="contact-link">+1 (213) 352-2795</a>
-            </div>
-
-          </li> -->
-
-          <!-- <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1982-06-23">June 23, 1982</time>
-            </div>
-
-          </li> -->
-
-          <!-- <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Sacramento, California, USA</address>
-            </div>
-
-          </li> -->
-
         </ul>
 
-        <div class="separator"></div>
+        <!-- <div class="separator"></div>
 
         <ul class="social-list">
 
@@ -147,7 +127,7 @@
 
         </ul>
 
-      </div>
+      </div> -->
 
     </aside>
 
@@ -174,11 +154,44 @@
         <section class="about-text">
           <p>
              I am currently an associate professor in the School of Software at Northwest Polytechnical University. My research interests include but are not limited to Object detection, 
-             Explainable Artificial Intelligence (XAI), and other deep learning applications. I have a rich experience in this field, and I am always keep up with the latest research trends. 
+             Explainable Artificial Intelligence (XAI), and other deep learning applications. I have a rich experience in this field, and I always keep up with the latest research trends. 
              My recent research works include but are not limited to Vision Language Model, Domain-specified Architecture Rebuild, Incremental Learning, and Multimodal learning.
           </p>
         </section>
 
+        <!-- 将timeline移至about me文字下方 -->
+        <section class="timeline">
+          <h3 class="h3 timeline-title">Education & Experience</h3>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Creative director</h4>
+              <span>2015 — Present</span>
+              <p class="timeline-text">
+                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
+                molestias
+                exceptur.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Art director</h4>
+              <span>2013 — 2015</span>
+              <p class="timeline-text">
+                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+                quas molestias
+                exceptur.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Web designer</h4>
+              <span>2010 — 2013</span>
+              <p class="timeline-text">
+                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+                quas molestias
+                exceptur.
+              </p>
+            </li>
+          </ol>
+        </section>
 
         <!--
           - service
@@ -325,77 +338,8 @@
 
         </section>
 
-      </article>
-
-    </div>
-
-  </main>
-
-
-
-
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-</body>
-
-</html>
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Creative director</h4>
-
-              <span>2015 — Present</span>
-
-              <p class="timeline-text">
-                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
-                molestias
-                exceptur.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Art director</h4>
-
-              <span>2013 — 2015</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Web designer</h4>
-
-              <span>2010 — 2013</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
+        <!-- 隐藏skills部分（使用注释包裹） -->
+        <!--
         <section class="skill">
 
           <h3 class="h3 skills-title">My skills</h3>
@@ -457,60 +401,31 @@
           </ul>
 
         </section>
+        -->
 
       </article>
 
+    </div>
+
+  </main>
 
 
 
 
-      <!--
-        - #PORTFOLIO
-      -->
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
 
-      <article class="portfolio" data-page="portfolio">
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
+</body>
 
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
+</html>
                 <button data-select-item>All</button>
               </li>
 
