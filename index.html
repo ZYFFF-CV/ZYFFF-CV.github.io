@@ -144,271 +144,289 @@
       - #main-content
     -->
 
+    <!-- 在main-content div内部，article元素之前添加标签导航 -->
     <div class="main-content">
+    
+    <!-- 添加标签导航 -->
+    <div class="tab-navigation">
+      <button class="tab-button active" data-tab="research">Research & News</button>
+      <button class="tab-button" data-tab="about">About</button>
+    </div>
+    
+    <style>
+      /* 标签导航样式 */
+      .tab-navigation {
+        display: flex;
+        border-bottom: 2px solid #e0e0e0;
+        margin-bottom: 30px;
+      }
+      
+      .tab-button {
+        padding: 12px 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+        color: #666;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+      
+      .tab-button:hover {
+        color: #333;
+      }
+      
+      .tab-button.active {
+        color: #1890ff;
+      }
+      
+      .tab-button.active::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #1890ff;
+      }
+      
+      /* 标签内容样式 */
+      .tab-content {
+        display: none;
+      }
+      
+      .tab-content.active {
+        display: block;
+        animation: fadeIn 0.5s ease;
+      }
+      
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+    </style>
+    
+    <!-- 修改第一个标签的内容，只保留Recent News和Publications -->
+    <article class="tab-content active" id="research">
+    
+    <!-- Recent News部分 -->
+    <section class="recent-news">
+      <h3 class="h3 news-title">Recent News!</h3>
+      <ul class="news-list">
+        <li class="news-item content-card">
+          <span class="news-date">June 2023</span>
+          <h4 class="h4 news-title">New research paper accepted</h4>
+          <p class="news-text">Our paper on multimodal learning has been accepted by a top-tier conference.</p>
+        </li>
+        <li class="news-item content-card">
+          <span class="news-date">May 2023</span>
+          <h4 class="h4 news-title">Research grant awarded</h4>
+          <p class="news-text">Received funding for a new project on explainable AI in computer vision.</p>
+        </li>
+        <li class="news-item content-card">
+          <span class="news-date">March 2023</span>
+          <h4 class="h4 news-title">Invited talk at international conference</h4>
+          <p class="news-text">Delivered a keynote speech on the future of vision language models.</p>
+        </li>
+      </ul>
+    </section>
+    
+    <!-- Publications部分 -->
+    <section class="publications-section">
+      <h3 class="h3 section-title">Publications</h3>
+      <h4 class="h4 section-subtitle">Journal Papers</h4>
+      <ul class="publications-list">
+        <li class="publication-item content-card">
+          <h4 class="h4 publication-title">Paper Title 1</h4>
+          <p class="publication-authors">Author 1, Author 2, Author 3</p>
+          <p class="publication-info">Journal Name, Volume(Issue), Page Range, Publication Year</p>
+          <div class="publication-links">
+            <a href="paper-link" class="publication-link">View Paper</a>
+            <a href="code-link" class="publication-link">Code</a>
+          </div>
+        </li>
+        <li class="publication-item content-card">
+          <h4 class="h4 publication-title">Paper Title 2</h4>
+          <p class="publication-authors">Author 1, Author 2</p>
+          <p class="publication-info">Journal Name, Volume(Issue), Page Range, Publication Year</p>
+          <div class="publication-links">
+            <a href="paper-link" class="publication-link">View Paper</a>
+          </div>
+        </li>
+      </ul>
+      <h4 class="h4 section-subtitle">Conference Papers</h4>
+      <ul class="publications-list">
+        <li class="publication-item content-card">
+          <h4 class="h4 publication-title">Paper Title 3</h4>
+          <p class="publication-authors">Author 1, Author 2, Author 3, Author 4</p>
+          <p class="publication-info">Conference Name, Conference Location, Page Range, Publication Year</p>
+          <div class="publication-links">
+            <a href="paper-link" class="publication-link">View Paper</a>
+            <a href="demo-link" class="publication-link">Demo</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+    </article>
 
-      <!--
-        - #ABOUT (single page content)
-      -->
-
-      <article class="about active">
-
-        <header>
-          <h2 class="h2 article-title">About Me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-             I am currently an associate professor in the School of Software at Northwest Polytechnical University. My research interests include but are not limited to Object detection, 
-             Explainable Artificial Intelligence (XAI), and other deep learning applications. I have a rich experience in this field, and I always keep up with the latest research trends. 
-             My recent research works include but are not limited to Vision Language Model, Domain-specified Architecture Rebuild, Incremental Learning, and Multimodal learning.
-          </p>
-        </section>
-
-        <!-- 将timeline移至about me文字下方 -->
-        <section class="timeline">
-          <h3 class="h3 timeline-title">Education & Experience</h3>
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Creative director</h4>
-              <span>2015 — Present</span>
-              <p class="timeline-text">
-                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
-                molestias
-                exceptur.
+    <!-- 创建第二个标签内容 -->
+    <article class="tab-content" id="about">
+      
+      <!-- About Me部分 -->
+      <header>
+        <h2 class="h2 article-title">About Me</h2>
+      </header>
+      
+      <section class="about-text">
+        <p>
+          I am currently an associate professor in the School of Software at Northwest Polytechnical University. My research interests include but are not limited to Object detection, 
+          Explainable Artificial Intelligence (XAI), and other deep learning applications. I have a rich experience in this field, and I always keep up with the latest research trends. 
+          My recent research works include but are not limited to Vision Language Model, Domain-specified Architecture Rebuild, Incremental Learning, and Multimodal learning.
+        </p>
+      </section>
+    
+      <!-- Education & Experience部分 -->
+      <section class="timeline">
+        <h3 class="h3 timeline-title">Education & Experience</h3>
+        <ol class="timeline-list">
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Creative director</h4>
+            <span>2015 — Present</span>
+            <p class="timeline-text">
+              Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
+              molestias
+              exceptur.
+            </p>
+          </li>
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Art director</h4>
+            <span>2013 — 2015</span>
+            <p class="timeline-text">
+              Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+              quas molestias
+              exceptur.
+            </p>
+          </li>
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Web designer</h4>
+            <span>2010 — 2013</span>
+            <p class="timeline-text">
+              Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+              quas molestias
+              exceptur.
+            </p>
+          </li>
+        </ol>
+      </section>
+    
+      <!-- Research Interests部分 -->
+      <section class="service">
+        <h3 class="h3 service-title">Research Interests</h3>
+        <ul class="service-list">
+          <li class="service-item">
+            <div class="service-icon-box">
+              <img src="./assets/images/icon-dev.svg" alt="Research Direction 1" width="40">
+            </div>
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">Object Detection</h4>
+              <p class="service-item-text">
+                Research on efficient and accurate object detection algorithms, including deep learning-based object recognition, localization, and tracking techniques.
               </p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Art director</h4>
-              <span>2013 — 2015</span>
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
+            </div>
+          </li>
+          <li class="service-item">
+            <div class="service-icon-box">
+              <img src="./assets/images/icon-app.svg" alt="Research Direction 2" width="40">
+            </div>
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">Explainable Artificial Intelligence</h4>
+              <p class="service-item-text">
+                Research on how to improve the explainability of deep learning models, making AI decision processes more transparent and trustworthy.
               </p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Web designer</h4>
-              <span>2010 — 2013</span>
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
+            </div>
+          </li>
+          <li class="service-item">
+            <div class="service-icon-box">
+              <img src="./assets/images/icon-design.svg" alt="Research Direction 3" width="40">
+            </div>
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">Vision Language Models</h4>
+              <p class="service-item-text">
+                Research on multimodal learning methods to achieve effective fusion and interaction between visual and linguistic information.
               </p>
-            </li>
-          </ol>
-        </section>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </article>
 
-        <!--
-          - service
-        -->
+    <!-- 隐藏skills部分（使用注释包裹） -->
+    <!--
+    <section class="skill">
 
-        <section class="service">
+      <h3 class="h3 skills-title">My skills</h3>
 
-          <h3 class="h3 service-title">Research Interests</h3>
+      <ul class="skills-list content-card">
 
-          <ul class="service-list">
+        <li class="skills-item">
 
-            <li class="service-item">
+          <div class="title-wrapper">
+            <h5 class="h5">Web design</h5>
+            <data value="80">80%</data>
+          </div>
 
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Research Direction 1" width="40">
-              </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="width: 80%;"></div>
+          </div>
 
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Object Detection</h4>
+        </li>
 
-                <p class="service-item-text">
-                  Research on efficient and accurate object detection algorithms, including deep learning-based object recognition, localization, and tracking techniques.
-                </p>
-              </div>
+        <li class="skills-item">
 
-            </li>
+          <div class="title-wrapper">
+            <h5 class="h5">Graphic design</h5>
+            <data value="70">70%</data>
+          </div>
 
-            <li class="service-item">
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="width: 70%;"></div>
+          </div>
 
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="Research Direction 2" width="40">
-              </div>
+        </li>
 
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Explainable Artificial Intelligence</h4>
+        <li class="skills-item">
 
-                <p class="service-item-text">
-                  Research on how to improve the explainability of deep learning models, making AI decision processes more transparent and trustworthy.
-                </p>
-              </div>
+          <div class="title-wrapper">
+            <h5 class="h5">Branding</h5>
+            <data value="90">90%</data>
+          </div>
 
-            </li>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="width: 90%;"></div>
+          </div>
 
-            <li class="service-item">
+        </li>
 
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg" alt="Research Direction 3" width="40">
-              </div>
+        <li class="skills-item">
 
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Vision Language Models</h4>
+          <div class="title-wrapper">
+            <h5 class="h5">WordPress</h5>
+            <data value="50">50%</data>
+          </div>
 
-                <p class="service-item-text">
-                  Research on multimodal learning methods to achieve effective fusion and interaction between visual and linguistic information.
-                </p>
-              </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" style="width: 50%;"></div>
+          </div>
 
-            </li>
+        </li>
 
-          </ul>
+      </ul>
 
-        </section>
+    </section>
+    -->
 
-        <!--
-          - Recent News
-        -->
-
-        <section class="recent-news">
-
-          <h3 class="h3 news-title">Recent News!</h3>
-
-          <ul class="news-list">
-
-            <li class="news-item content-card">
-              <span class="news-date">June 2023</span>
-              <h4 class="h4 news-title">New research paper accepted</h4>
-              <p class="news-text">Our paper on multimodal learning has been accepted by a top-tier conference.</p>
-            </li>
-
-            <li class="news-item content-card">
-              <span class="news-date">May 2023</span>
-              <h4 class="h4 news-title">Research grant awarded</h4>
-              <p class="news-text">Received funding for a new project on explainable AI in computer vision.</p>
-            </li>
-
-            <li class="news-item content-card">
-              <span class="news-date">March 2023</span>
-              <h4 class="h4 news-title">Invited talk at international conference</h4>
-              <p class="news-text">Delivered a keynote speech on the future of vision language models.</p>
-            </li>
-
-          </ul>
-
-        </section>
-
-        <!--
-          - Publications
-        -->
-
-        <section class="publications-section">
-
-          <h3 class="h3 section-title">Publications</h3>
-
-          <h4 class="h4 section-subtitle">Journal Papers</h4>
-
-          <ul class="publications-list">
-
-            <li class="publication-item content-card">
-              <h4 class="h4 publication-title">Paper Title 1</h4>
-              <p class="publication-authors">Author 1, Author 2, Author 3</p>
-              <p class="publication-info">Journal Name, Volume(Issue), Page Range, Publication Year</p>
-              <div class="publication-links">
-                <a href="paper-link" class="publication-link">View Paper</a>
-                <a href="code-link" class="publication-link">Code</a>
-              </div>
-            </li>
-
-            <li class="publication-item content-card">
-              <h4 class="h4 publication-title">Paper Title 2</h4>
-              <p class="publication-authors">Author 1, Author 2</p>
-              <p class="publication-info">Journal Name, Volume(Issue), Page Range, Publication Year</p>
-              <div class="publication-links">
-                <a href="paper-link" class="publication-link">View Paper</a>
-              </div>
-            </li>
-
-          </ul>
-
-          <h4 class="h4 section-subtitle">Conference Papers</h4>
-
-          <ul class="publications-list">
-
-            <li class="publication-item content-card">
-              <h4 class="h4 publication-title">Paper Title 3</h4>
-              <p class="publication-authors">Author 1, Author 2, Author 3, Author 4</p>
-              <p class="publication-info">Conference Name, Conference Location, Page Range, Publication Year</p>
-              <div class="publication-links">
-                <a href="paper-link" class="publication-link">View Paper</a>
-                <a href="demo-link" class="publication-link">Demo</a>
-              </div>
-            </li>
-
-          </ul>
-
-        </section>
-
-        <!-- 隐藏skills部分（使用注释包裹） -->
-        <!--
-        <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Web design</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Graphic design</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Branding</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">WordPress</h5>
-                <data value="50">50%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-        -->
-
-      </article>
+    </article>
 
     </div>
 
@@ -431,4 +449,3 @@
 </body>
 
 </html>
- 
