@@ -1409,8 +1409,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   /* testimonials */
 
   .testimonials-title { margin-bottom: 25px; }
-
-  .testimonials-list {
+.testimonials-list {
     gap: 30px;
     margin: 0 -30px;
     padding: 30px;
@@ -1879,4 +1878,64 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+}
+
+
+
+/* 论文列表样式 */
+.publications-section {
+  margin-bottom: 30px;
+}
+
+.publications-list {
+  list-style: none;
+  padding: 0;
+}
+
+.publication-item {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.publication-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.publication-title {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.publication-authors {
+  margin: 0 0 5px 0;
+  color: #666;
+}
+
+.publication-info {
+  margin: 0 0 10px 0;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.publication-links {
+  display: flex;
+  gap: 10px;
+}
+
+.publication-link {
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.publication-link:hover {
+  background-color: #555;
 }
