@@ -1897,49 +1897,47 @@ textarea.form-input::-webkit-resizer { display: none; }
 .publications-list {
   list-style: none;
   padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--jet);
 }
 
 .publication-item {
-  margin-bottom: 20px;
-  padding: 20px 22px;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-}
-
-.publication-item:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-3);
+  padding: 16px 0;
+  border-bottom: 1px solid var(--jet);
 }
 
 .publication-title {
-  margin: 0 0 10px 0;
+  margin: 0 0 6px 0;
   color: var(--white-2);
+  font-weight: var(--fw-600);
+  line-height: 1.35;
 }
 
 .publication-authors {
-  margin: 0 0 5px 0;
-  color: var(--light-gray-70);
+  margin: 0 0 4px 0;
+  color: var(--light-gray);
 }
 
 .publication-info {
-  margin: 0 0 10px 0;
-  font-size: 0.9rem;
+  margin: 0 0 8px 0;
+  font-size: 0.92rem;
   color: var(--light-gray-70);
 }
 
 .publication-links {
   display: flex;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .publication-link {
   display: inline-block;
-  padding: 6px 14px;
+  padding: 4px 10px;
   background-color: hsl(219, 100%, 96%);
   color: var(--orange-yellow-crayola);
   text-decoration: none;
   border-radius: 999px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
