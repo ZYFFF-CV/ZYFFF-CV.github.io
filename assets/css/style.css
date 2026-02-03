@@ -24,29 +24,29 @@
   /* gradient */
 
   --bg-gradient-onyx: linear-gradient(
-    to bottom right, 
-    hsl(240, 1%, 25%) 3%, 
-    hsl(0, 0%, 19%) 97%
+    to bottom right,
+    hsl(221, 39%, 16%) 3%,
+    hsl(222, 47%, 11%) 97%
   );
   --bg-gradient-jet: linear-gradient(
-    to bottom right, 
-    hsla(240, 1%, 18%, 0.251) 0%, 
-    hsla(240, 2%, 11%, 0) 100%
-  ), hsl(240, 2%, 13%);
+    to bottom right,
+    hsla(221, 39%, 16%, 0.55) 0%,
+    hsla(221, 39%, 11%, 0) 100%
+  ), hsl(222, 47%, 13%);
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right, 
     hsl(45, 100%, 71%) 0%, 
     hsla(36, 100%, 69%, 0) 50%
   );
   --bg-gradient-yellow-2: linear-gradient(
-    135deg, 
-    hsla(45, 100%, 71%, 0.251) 0%, 
+    135deg,
+    hsla(45, 100%, 71%, 0.251) 0%,
     hsla(35, 100%, 68%, 0) 59.86%
-  ), hsl(240, 2%, 13%);
+  ), hsl(222, 47%, 13%);
   --border-gradient-onyx: linear-gradient(
-    to bottom right, 
-    hsl(0, 0%, 25%) 0%, 
-    hsla(0, 0%, 25%, 0) 50%
+    to bottom right,
+    hsl(220, 18%, 22%) 0%,
+    hsla(220, 18%, 22%, 0) 50%
   );
   --text-gradient-yellow: linear-gradient(
     to right, 
@@ -56,17 +56,17 @@
 
   /* solid */
 
-  --jet: hsl(0, 0%, 22%);
-  --onyx: hsl(240, 1%, 17%);
-  --eerie-black-1: hsl(240, 2%, 13%);
-  --eerie-black-2: hsl(240, 2%, 12%);
-  --smoky-black: hsl(0, 0%, 7%);
+  --jet: hsl(220, 16%, 22%);
+  --onyx: hsl(222, 47%, 12%);
+  --eerie-black-1: hsl(222, 47%, 14%);
+  --eerie-black-2: hsl(222, 47%, 11%);
+  --smoky-black: hsl(222, 53%, 8%);
   --white-1: hsl(0, 0%, 100%);
   --white-2: hsl(0, 0%, 98%);
   --orange-yellow-crayola: hsl(45, 100%, 72%);
   --vegas-gold: hsl(45, 54%, 58%);
-  --light-gray: hsl(0, 0%, 84%);
-  --light-gray-70: hsla(0, 0%, 84%, 0.7);
+  --light-gray: hsl(220, 14%, 82%);
+  --light-gray-70: hsla(220, 14%, 82%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
 
   /**
@@ -155,7 +155,11 @@ input, textarea {
 
 html { font-family: var(--ff-poppins); }
 
-body { background: var(--smoky-black); }
+body {
+  background: var(--smoky-black);
+  color: var(--light-gray);
+  line-height: 1.65;
+}
 
 
 
@@ -168,7 +172,7 @@ body { background: var(--smoky-black); }
 .sidebar,
 article {
   background: var(--eerie-black-2);
-  border: 1px solid var(--jet);
+  border: 1px solid hsla(220, 16%, 22%, 0.8);
   border-radius: 20px;
   padding: 15px;
   box-shadow: var(--shadow-1);
@@ -178,7 +182,7 @@ article {
 .separator {
   width: 100%;
   height: 1px;
-  background: var(--jet);
+  background: hsla(220, 16%, 22%, 0.8);
   margin: 16px 0;
 }
 
@@ -242,6 +246,7 @@ article.active {
 .article-title {
   position: relative;
   padding-bottom: 7px;
+  letter-spacing: 0.2px;
 }
 
 .article-title::after {
@@ -275,10 +280,9 @@ article.active {
 .content-card {
   position: relative;
   background: var(--border-gradient-onyx);
-  padding: 15px;
-  padding-top: 45px;
+  padding: 18px 20px;
   border-radius: 14px;
-  box-shadow: var(--shadow-2);
+  box-shadow: 0 12px 24px hsla(222, 47%, 5%, 0.35);
   cursor: pointer;
   z-index: 1;
 }
@@ -459,9 +463,9 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: hsla(240, 1%, 17%, 0.75);
+  background: hsla(222, 47%, 11%, 0.85);
   backdrop-filter: blur(10px);
-  border: 1px solid var(--jet);
+  border: 1px solid hsla(220, 16%, 22%, 0.8);
   border-radius: 12px 12px 0 0;
   box-shadow: var(--shadow-2);
   z-index: 5;
@@ -501,7 +505,7 @@ main {
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
-  line-height: 1.6;
+  line-height: 1.75;
 }
 
 .about-text p { margin-bottom: 15px; }
@@ -551,8 +555,8 @@ main {
 .service-item-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
-  font-weight: var(--fw-3);
-  line-height: 1.6;
+  font-weight: var(--fw-300);
+  line-height: 1.7;
 }
 
 
@@ -783,6 +787,8 @@ main {
 .timeline-list {
   font-size: var(--fs-6);
   margin-left: 45px;
+  margin-top: 20px;
+  padding-top: 15px;
 }
 
 .timeline-item { position: relative; }
@@ -826,7 +832,7 @@ main {
 .timeline-text {
   color: var(--light-gray);
   font-weight: var(--fw-300);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 
@@ -1894,30 +1900,30 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .publication-item {
   margin-bottom: 20px;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 20px 22px;
+  border-radius: 12px;
   transition: all 0.3s ease;
 }
 
 .publication-item:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 16px 36px hsla(222, 47%, 5%, 0.35);
 }
 
 .publication-title {
   margin: 0 0 10px 0;
-  color: #333;
+  color: var(--white-2);
 }
 
 .publication-authors {
   margin: 0 0 5px 0;
-  color: #666;
+  color: var(--light-gray-70);
 }
 
 .publication-info {
   margin: 0 0 10px 0;
   font-size: 0.9rem;
-  color: #888;
+  color: var(--light-gray-70);
 }
 
 .publication-links {
@@ -1927,15 +1933,67 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .publication-link {
   display: inline-block;
-  padding: 5px 15px;
-  background-color: #333;
-  color: white;
+  padding: 6px 14px;
+  background-color: hsla(220, 16%, 20%, 0.9);
+  color: var(--white-2);
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 999px;
   font-size: 0.9rem;
   transition: background-color 0.3s ease;
 }
 
 .publication-link:hover {
-  background-color: #555;
+  background-color: hsla(220, 16%, 24%, 0.95);
+}
+
+.section-title {
+  margin-bottom: 20px;
+}
+
+.section-subtitle {
+  color: var(--light-gray-70);
+  font-weight: var(--fw-500);
+  letter-spacing: 0.3px;
+  margin: 18px 0 12px;
+}
+
+.recent-news {
+  margin-bottom: 2.2rem;
+}
+
+.recent-news .news-list {
+  margin-top: 0.75rem;
+  display: grid;
+  gap: 12px;
+}
+
+.recent-news .news-item {
+  padding: 16px 18px;
+  border-radius: 12px;
+  cursor: default;
+}
+
+.news-date {
+  color: var(--orange-yellow-crayola);
+  font-weight: var(--fw-600);
+  font-size: 0.95rem;
+}
+
+.news-item .news-title {
+  color: var(--white-2);
+  margin-top: 0.35rem;
+}
+
+.news-text {
+  color: hsl(220, 23%, 80%);
+}
+
+.service-icon-box {
+  background-color: rgba(148, 163, 184, 0.15);
+  border-radius: 12px;
+}
+
+.contact-item .icon-box {
+  background-color: rgba(148, 163, 184, 0.25);
+  border-radius: 12px;
 }
