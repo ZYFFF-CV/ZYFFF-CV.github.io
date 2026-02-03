@@ -785,7 +785,7 @@ main {
  * education and experience 
  */
 
-.timeline { margin-bottom: 30px; }
+.timeline { margin-bottom: 20px; }
 
 .timeline .title-wrapper {
   display: flex;
@@ -796,14 +796,14 @@ main {
 
 .timeline-list {
   font-size: var(--fs-6);
-  margin-left: 45px;
-  margin-top: 20px;
-  padding-top: 15px;
+  margin-left: 32px;
+  margin-top: 10px;
+  padding-top: 8px;
 }
 
 .timeline-item { position: relative; }
 
-.timeline-item:not(:last-child) { margin-bottom: 20px; }
+.timeline-item:not(:last-child) { margin-bottom: 12px; }
 
 .timeline-item-title {
   font-size: var(--fs-6);
@@ -1494,7 +1494,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    * #RESUME
    */
 
-  .timeline-list { margin-left: 65px; }
+  .timeline-list { margin-left: 48px; }
 
   .timeline-item:not(:last-child)::before { left: -40px; }
 
@@ -1906,6 +1906,21 @@ textarea.form-input::-webkit-resizer { display: none; }
   border-bottom: 1px solid var(--jet);
 }
 
+.publication-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 6px 12px;
+  margin-bottom: 4px;
+}
+
+.publication-meta {
+  color: var(--light-gray-70);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
 .publication-title {
   margin: 0 0 6px 0;
   color: var(--white-2);
@@ -1988,6 +2003,24 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .news-text {
   color: hsl(215, 20%, 35%);
+}
+
+.research {
+  margin-bottom: 20px;
+}
+
+.research-item {
+  margin-bottom: 14px;
+}
+
+.research-item h4 {
+  margin-bottom: 6px;
+}
+
+.research-item p {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  line-height: 1.7;
 }
 
 .service-icon-box {
