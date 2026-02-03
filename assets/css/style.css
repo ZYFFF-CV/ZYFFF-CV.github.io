@@ -1908,11 +1908,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .publication-header {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 6px 12px;
-  margin-bottom: 4px;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 6px;
 }
 
 .publication-meta {
@@ -2003,6 +2001,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .news-text {
   color: hsl(215, 20%, 35%);
+}
+
+.is-hidden {
+  display: none !important;
 }
 
 .research {
